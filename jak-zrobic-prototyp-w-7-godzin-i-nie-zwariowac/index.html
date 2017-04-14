@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Jak zrobić prototyp w 7 godzin i nie zwariować</title>
+
+		<meta name="description" content="Jak zrobić prototyp w 7 godzin i nie zwariować">
+		<meta name="author" content="Bartosz Legięć &amp; Kacper Pietrzal">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../assets/css/reveal.css">
+		<link rel="stylesheet" href="../assets/css/theme/PiGames.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../assets/lib/css/atom-one-dark.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../assets/css/print/pdf.css' : '../assets/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="title-slide" data-background-color="#f06292">
+					<h2>Jak zrobić prototyp w&nbsp;7&nbsp;godzin i nie zwariować</h2>
+				</section>
+
+				<section>
+					<section>
+						<h3>Backstory</h3>
+						<img src="http://zdrowieton.pl/assets/images/logo.svg" class="plain" />
+					</section>
+					<section>
+						<h3>Feed The Bob</h3>
+						<iframe data-src="http://pigam.es/Feed-The-Bob/build/" class="stretch"></iframe>
+					</section>
+				</section>
+
+				<section>
+					<h3>Przetestuj środowisko przed rozpoczęciem</h3>
+					<img src="img/error.gif" class="plain" style="border-radius: 2px;">
+				</section>
+
+				<section>
+					<section>
+						<h3>Zbierz swoją drużynę</h3>
+						<img src="https://media.giphy.com/media/3rgXBrLlRs4ZlpnVDO/giphy.gif" class="stretch" />
+					</section>
+					<section>
+						<img src="img/bobyoung.png" class="stretch" />
+					</section>
+					<section>
+						<img src="img/bob2.png" class="stretch" />
+					</section>
+					<section>
+						<p>Nie masz grafika? Nic się nie stało!</p>
+						<ul>
+							<li><a href="https://opengameart.org">opengameart.org</a></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Korzystaj z template'ów</h3>
+					</section>
+					<section>
+						<h3>Encalve Phaser Template</h3>
+						<img src="img/ept.png" class="stretch" />
+						<small><a href="https://github.com/enclavegames/Enclave-Phaser-Template">https://github.com/enclavegames/Enclave-Phaser-Template</a></small>
+					</section>
+					<section>
+						<h3>PiGames Phaser Template (ES6)</h3>
+						<img src="img/ept.png" class="stretch" />
+						<small><a href="https://github.com/PiGames/PiGames-Phaser-Template">https://github.com/PiGames/PiGames-Phaser-Template</a></small>
+					</section>
+				</section>
+
+				<section>
+					<h3>Znajdź swoje MVP</h3>
+					<img src="img/quotedone.jpg" class="stretch" />
+				</section>
+
+				<section>
+					<h3>Mockuj ile się da</h3>
+					<pre><code class="hljs javascript" data-trim contenteditable>
+				export default class FoodSpawner extends Phaser.Group {
+					create() {
+						this.spawnFood();
+					}
+
+					spawnFood() {
+						this.game.world.add( new Food() );
+					}
+				}
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Lepiej merge'ować za często niż za rzadko</h3>
+					<img src="https://media.giphy.com/media/cFkiFMDg3iFoI/giphy.gif" class="stretch" />
+				</section>
+
+				<section>
+					<section>
+						<h3>Nie daj się presji czasu</h3>
+						<img src="https://media.giphy.com/media/HUkOv6BNWc1HO/giphy.gif" class="stretch" />
+					</section>
+					<section>
+						<h3>Nie daj się presji czasu</h3>
+						<img src="img/gif.png" class="stretch" />
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Dokończ projekt po hackatonie</h3>
+						<img src="img/oldbob.png" class="stretch" />
+					</section>
+					<section>
+						<h3>Dokończ projekt po hackatonie</h3>
+						<img src="img/newbob.png" class="stretch" />
+					</section>
+				</section>
+
+				<section>
+					<h3>Podsumowanie</h3>
+					<ol>
+						<li>Przygotuj środowisko przed hackatonem</li>
+						<li>Zadbaj o różnorodny team</li>
+						<li>Korzystaj z template'ów</li>
+						<li>Skup się na implementacji MVP</li>
+						<li>Merge'uj często</li>
+						<li>Dużo mockuj</li>
+						<li>Nie panikuj</li>
+						<li>Dokończ projekt po hackatonie</li>
+					</ol>
+				</section>
+
+				<!-- <section>
+					<h3>Podsumowanie</h3>
+					<ol>
+						<li>Przygotuj środowisko przed hackatonem (K)</li>
+						<li>Zadbaj o różnorodny team (B)</li>
+						<li>Korzystaj z template'ów (B)</li>
+						<li>Skup się na implementacji MVP (K)</li>
+						<li>Merge'uj często (K)</li>
+						<li>Dużo mockuj (K)</li>
+						<li>Nie panikuj (B)</li>
+						<li>Dokończ projekt po hackatonie (B)</li>
+					</ol>
+				</section> -->
+
+				<section>
+					<section>
+						<h3>Autopromocja</h3>
+						<img src="img/PiGames.png" class="plain stretch" />
+						<p>PN</p>
+						<p>YT</p>
+						<p>GH</p>
+					</section>
+					<section>
+						<h3>PS:</h3>
+						<p>Szukamy grafika i producenta muzycznego</p>
+						<p class="fragment" data-fragment-index="1">i stażu 😉</p>
+					</section>
+				</section>
+
+				<section>
+					<h1>Q &amp; A</h1>
+				</section>
+
+				<section>
+					<h3>Linki</h3>
+					<ul>
+						<li><a href="http://pigam.es">pigam.es</a></li>
+						<li><a href="http://pigam.es">pigam.es</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="../assets/lib/js/head.min.js"></script>
+		<script src="../assets/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../assets/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../assets/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../assets/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../assets/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure( { tabReplace: '  ' } ); hljs.initHighlightingOnLoad(); } },
+					{ src: '../assets/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../assets/plugin/notes/notes.js', async: true },
+					{ src: '../assets/plugin/gamepad/gamepad.min.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
