@@ -113,18 +113,26 @@
 				</section>
 
 				<section>
-					<h3>Mockuj ile się da</h3>
-					<pre><code class="hljs javascript" data-trim contenteditable>
-				export default class FoodSpawner extends Phaser.Group {
-					create() {
-						this.spawnFood();
-					}
+					<section>
+						<h3>Mockuj ile się da</h3>
+					</section>
+					<section>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+					export default class FoodSpawner extends Phaser.Group {
+						spawnFood() {
+							this.game.world.add( new Food( 0, 0, 'apple' ) );
 
-					spawnFood() {
-						this.game.world.add( new Food() );
+							setTimeout( () => {
+								this.game.world.add( new Food( 0, 0, 'hamburger' ) );
+							}, 1000 );
+
+							setTimeout( () => {
+								this.game.world.add( new Food( 0, 0, 'chicken' ) );
+							}, 2000 );
+						}
 					}
-				}
-					</code></pre>
+						</code></pre>
+					</section>
 				</section>
 
 				<section>
