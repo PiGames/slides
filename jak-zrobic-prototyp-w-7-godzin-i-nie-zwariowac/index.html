@@ -46,24 +46,33 @@
 					<section>
 						<h3>Feed The Bob</h3>
 						<img src="img/oldbob.png" class="stretch" />
-						<!-- <iframe data-src="http://pigam.es/Feed-The-Bob/build/" class="stretch"></iframe> -->
 					</section>
 				</section>
 
 				<section>
 					<h3>Przetestuj środowisko przed rozpoczęciem</h3>
 					<img src="img/error.gif" class="plain" style="border-radius: 2px;">
+
+					<aside class="notes">
+To jest punkt który nie znalazłby się na tej liście gdyby nie nieprzyjemny przypadek który przydarzył się mi na zdrowietonie.
+Otóż mam bardzo starego i słabego laptopa. Jest 9:30, jesteśmy już po odprawie na zdrowietonie, włączam laptopa, ściągam repo z GitHuba, npm install, i czekam… Czekam tak  z 5 minut i npm wywala błąd. Odpalam jeszcze raz, w końcu npm ma swoje humorki. Czekam 5 minut i znowu błąd. Już sobie myślę: kurde, jak tu jakiś komputer sobie załatwić, może Andrzej mi Maca pożyczy… No ale walcze dalej. Dobrze, że w naszym pokoju akurat był jeden z mentorów Staś, bo ez niego to już bym szukał gdzieś laptopa dla siebie.
+Dopiero po jakiś 20 minutach walki, próbach update-u node-a, instalacji przez yarna itd.  Staś powiedział mi żeby ściągnąć nvm-a i przez niego zainstalować node-a, zadziałało
+
+Zmarnowany czas i niepotrzebny stres, tylko dlatego, że nie przetestowałem przedtem czy wszystko działa.
+
+Więc tak, przetestujcie środowisko przed rozpoczęciem hackatonu, najlepiej w domu kiedy macie jeszcze czas żeby na spokojnie znaleźć rozwiązeniu problemu.
+					</aside>
 				</section>
 
 				<section>
 					<section>
 						<h3>Zbierz swoją drużynę</h3>
 						<img src="https://media.giphy.com/media/3rgXBrLlRs4ZlpnVDO/giphy.gif" class="stretch" />
-					</section>
-					<section>
-						<div class="side-by-side">
-							<img src="img/bobyoung.png" />
-						</div>
+						<aside class="notes">
+							<ul>
+Gra to nie tylko kod! Ważne jest, żeby w drużynie znalazły się różnorodne osoby. Od osób które skupią się wyłącznie na kodzie (tak jak Kacper), przez takie, które potrafią coś zaprojektować czy zrobić UI (ja), aż po grafika czy scenarzystę. Akurat u nas scenarzysta nie był zbyt potrzebny, ale za to grafika mieliśmy zdalnie. 
+I tu pojawia się kolejny aspekt podczas tworzenia teamu. Komunikacja. Jako, że pracujemy szybko bo nagli nas czas to często nie mamy czasu na konkretne wytłumaczenie innym członkom drużyny dokładnie czego chcemy. I wtedy powstają takie kwiatki jak ten (slajd). Szczególnie jeśli pracujemy z kimś zdalnie to ważne jest aby zadbać o to by się dogadać.
+						</aside>
 					</section>
 					<section>
 						<h4>Nie masz grafika? Nic się nie stało!</h4>
@@ -90,34 +99,69 @@
 				<section>
 					<section>
 						<h3>Korzystaj z template'ów</h3>
+						<aside class="notes">
+Robienie od zera gry czasami jest przyjemne, ale podczas hackatonu nie ma na to czasu. Template'y pozwalają nam na szybkie zaczęcie projektu bez konieczności myślenia o takich rzeczach jak menu czy obsługa dźwięków.
+</aside>
+						</aside>
 					</section>
 					<section>
 						<h3>Encalve Phaser Template</h3>
 						<img src="img/ept.png" class="stretch" />
 						<small><a href="https://github.com/enclavegames/Enclave-Phaser-Template">https://github.com/enclavegames/Enclave-Phaser-Template</a></small>
+						<aside class="notes">
+My korzystaliśmy z template'a Andrzeja, którego skończyliśmy przepisywać na es6 jakieś 10 minut przed rozpoczęciem pracy i nie mieliśmy żadnego pojęcia czy się wszystko poprawnie skompiluje i czy będzie działać. I prawie się udało.
+						</aside>
 					</section>
 					<section>
 						<h3>PiGames Phaser Template (ES6)</h3>
 						<img src="img/ppt.png" class="stretch" />
 						<small><a href="https://github.com/PiGames/PiGames-Phaser-Template">https://github.com/PiGames/PiGames-Phaser-Template</a></small>
+						<aside class="notes">
+							A skoro się udało to po lekkich już zmianach zrobionych po hackatonie wrzuciliśmy go na GH. A więc jeśli ktoś woli pisać w ES6 to zapraszamy do forkowania.
+						</aside>
 					</section>
 				</section>
 
-				<section data-background-color="#f3d213">
-					<h3>Znajdź swoje MVP</h3>
-					<!-- <img src="img/quotedone.jpg" class="stretch" /> -->
-					<div class="stretch" style="display: flex; flex-direction: column; justify-content: center; width: 80%;">
-						<h4 style="text-transform: none; font-style: italic;">Done is better than perfect</h4>
-						<small style="text-align: right;">- Sheryl Sandberg</small>
-					</blockquote>
+				<section>
+					<section>
+						<h3>Znajdź swoje MVP</h3>
+						<aside class="notes">
+	Jeśli ktoś z was nie słyszał nigdy o MVP, to szybko wyjaśnię.
+	MVP czyli Minimal Viable Product. To produkt który ma tylko niezbędne funkcjonalności.
+	W przypadku gry, jest to rdzeń rozgrywki, tak zwane „samo gęste”.
+	U nas MVP to był ekran na którym latają 3 rodzaje jedzenia ( każde dające inny makroskładnik ) i po kliknięciu w nie aktualizują się odpowiednie statystki gracza. Gracz może przegrać z niedoboru lub z przedawkowania makroskładników.
+	 Gdybyśmy nie zdążli napisać nic więcej, to nadal byłoby grywalne.
+	I właśnie od tego należy zacząć pisanie swojej gry. Od implementacji MVP.
+	Jest to o tyle ważne, że na hakatonie jest zawsze za mało czasu. Jeśli zaczniemy od implementacji fajnej animacji po zabiciu przeciwnika jest duża szansa, że nie uda nam się zaimplementować rdzenia rozgrywki. I po 7h zostaniemy z czymś co nawet nie jest grą.
+
+	W idealnym świecie uda wam się zrobić MVP do połowy wyznaczonego czasu, wtedy warto poprosić kogoś o feedback, czy to mentorów, czy to nudzących się członków innych zespołów.
+
+	Po otrzymaniu feedbacku będziecie wiedzieli co poprawić w rdzeniu, i będziecie mogli przejść do implementacji wszystkich błyskotek.
+						</aside>
+					</section>
+					<section>
+						<!-- <iframe width="560" height="315" data-src="https://www.youtube.com/embed/UvCri1tqIxQ" frameborder="0" allowfullscreen class="stretch"></iframe> -->
+					</section>
 				</section>
 
 				<section>
 					<section>
 						<h3>Mockuj ile się da</h3>
+						<aside class="notes">
+Ten temat jest powiązany z poprzednim, czyli MVP.
+Otóż, implementując podstawowe funkcjonalności, natraficie na momenty w których będzie samo się narzucało napisanie jakiegoś feature’u.
+
+Na przykład w Feed The Bob czymś takim jest Food Spawner, wiemy, że jedzenie musi się pojawić na ekranie, więc przydałoby się coś takiego, co będzie co jakiś czas spawnowało jedzenie, najlepiej w losowych miejscach, dookoła ekranu.
+
+Żeby nie tracić czasu na zastanowienie się jak ten ficzer zakodować, zmockujcie go.
+Dla tych co nie mieli do czynienia z tematem testów jednostkowych.
+Mock, oznacza obiekt naśladujący zachowanie rzeczywistego obiektu. Tzn reszta waszego kodu może działać tak, jakby rzeczywsty obiekt był zaimplementowany.
+Napisanie go, zajmuje chwilę, a wy możecie wyrzucić  nutrujący was pomysł z głowy i skupić na MVP. Jak napiszecie MVP, to możecie potem na spokojnie zająć się zastąpywaniem tych mocków prawdziwymi obiektami.
+
+						</aside>
 					</section>
 					<section>
-						<pre><code class="hljs javascript" data-trim contenteditable>
+						<pre><code class="hljs javascript" data-trim>
 					export default class FoodSpawner extends Phaser.Group {
 						spawnFood() {
 							this.game.world.add( new Food( 0, 0, 'apple' ) );
@@ -132,22 +176,46 @@
 						}
 					}
 						</code></pre>
+					<aside class="notes">
+						Tutaj mamy przykład takiego prostego Mocka Food Spawnera, który w ciągu 3 sekund zespawnuje nam banana, kurczaka i hamburgera na pozycji 0,0. Wystarczy to, żeby móc sprawdzić czy inne mechaniki działają. A zajmuje minutę do napisania.
+					</aside>
 					</section>
 				</section>
 
 				<section>
 					<h3>Lepiej merge'ować za często niż za rzadko</h3>
 					<img src="https://media.giphy.com/media/cFkiFMDg3iFoI/giphy.gif" class="stretch" />
+					<aside class="notes">
+Widzimy na załączonym gif’ie co dzieje się gdy merge’ujemy za rzadko.
+Sytuacja do której nie chcecie dopuścić, to żeby po paru godzinach kodowania, każdy członek zespołu miał u siebie na localu zupełnie inną grę.
+My przyjęliśmy taki system, że jak tylko ktoś ukończył nawet najmniejszy feature, to robi commita, pobiera zmiany z repo, rozwiązuje ew. konflikty i wysyła swoje zmiany. U nas było to dość proste bo pracowaliśmy na masterze.
+W większym zespole może być trochę ciężej o prace na jednym branchu i merge’e co chwila. Więc warto przyjąć sobie jakiś interwał (na przykład co godzinę) co który robicie merge’a do mastera i upewniacie się, że wszystko działa jak należy.
+					</aside>
 				</section>
 
 				<section>
 					<section>
 						<h3>Nie daj się presji czasu</h3>
 						<img src="https://media.giphy.com/media/HUkOv6BNWc1HO/giphy.gif" class="stretch" />
+						<aside class="notes">
+Kolejną ważną sprawą jest to by zachować spokój nawet jeśli nie zaimplementowaliśmy największego core feature'a a została nam tylko godzina do oddania prac. Najlepszym przykładem tego, że my daliśmy się presji czasu jest wykaz commitów sprzed ostatniej godziny przed oddaniem prac.
+Natomiast gdy nasz mózg już nie wyrabia to dobrym pomysłem jest wyjście z pokoju zostawienie komputera i pójście się przejść, napić lub coś zjeść, a po powrocie podejść do sprawy nad którą ślęczeliśmy na świeżo.
+						</aside>
 					</section>
 					<section>
 						<h3>Nie daj się presji czasu</h3>
 						<img src="img/gif.png" class="stretch" />
+						<aside class="notes">
+							<ul>
+								<li>
+									odpoczynek
+									<ul>
+										<li>spacer</li>
+										<li>picie</li>
+									</ul>
+								</li>
+							</ul>
+						</aside>
 					</section>
 				</section>
 
@@ -155,6 +223,10 @@
 					<section>
 						<h3>Dokończ projekt po hackatonie</h3>
 						<img src="img/oldbob.png" class="stretch" />
+						<aside class="notes">
+Jeśli kod nie wije się jak spaghetti (a nawet jeśli się wije) to dobrze jest skończyć projekt nad którym wylało się tyle potu. W naszym przypadku kończenie projektu zaczęło się od naprawienia wszystkich hotfixów.
+Dodatkową motywacją do dokończenia gry może być chęć wydania gry i być może zarobienia co nieco z niej.
+						</aside>
 					</section>
 					<section>
 						<h3>Dokończ projekt po hackatonie</h3>
@@ -169,16 +241,12 @@
 						<li>Zadbaj o różnorodny team</li>
 						<li>Korzystaj z template'ów</li>
 						<li>Skup się na implementacji MVP</li>
-						<li>Merge'uj często</li>
 						<li>Dużo mockuj</li>
+						<li>Merge'uj często</li>
 						<li>Nie panikuj</li>
 						<li>Dokończ projekt po hackatonie</li>
 					</ol>
 				</section>
-
-				<!-- <p>PN</p>
-				<p>YT</p>
-				<p>GH</p> -->
 
 				<section>
 					<section>
@@ -204,6 +272,7 @@
 					<section>
 						<h3>PS:</h3>
 						<p>Szukamy grafika i dźwiękowca</p>
+						<p><a href="mailto:pigames.team@gmail.com">pigames.team@gmail.com</a></p>
 						<p class="fragment" data-fragment-index="1">i stażu <i class="em em-wink"></i></p>
 					</section>
 				</section>
