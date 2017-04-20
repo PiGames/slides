@@ -29,9 +29,20 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? '../assets/css/print/pdf.css' : '../assets/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<style media="screen">
+			.logo {
+				position: fixed;
+				top: 8px;
+				right: 8px;
+				width: 48px;
+				z-index: 999;
+			}
+		</style>
 	</head>
 
 	<body>
+		<img src="img/logo_white.png" class="logo">
 		<div class="reveal">
 			<div class="slides">
 				<section class="title-slide" data-background-color="#f06292">
